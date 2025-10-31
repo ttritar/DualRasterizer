@@ -23,10 +23,10 @@ namespace dae {
 		}
 		else
 		{
-			m_pDiffuseTexture = Texture::LoadFromFile("resources/vehicle_diffuse.png", pDevice);
-			m_pNormalTexture = Texture::LoadFromFile("resources/vehicle_normal.png", pDevice);
-			m_pSpecularTexture = Texture::LoadFromFile("resources/vehicle_specular.png", pDevice);
-			m_pGlossinessTexture = Texture::LoadFromFile("resources/vehicle_gloss.png", pDevice);
+			m_pDiffuseTexture = Texture::LoadFromFile("resources/Kart_diffuse.png", pDevice);
+			m_pNormalTexture = Texture::LoadFromFile("resources/Kart_normal.png", pDevice);
+			m_pSpecularTexture = Texture::LoadFromFile("resources/Kart_specular.png", pDevice);
+			m_pGlossinessTexture = Texture::LoadFromFile("resources/Kart_gloss.png", pDevice);
 		}
 			
 

@@ -46,7 +46,7 @@ namespace dae {
 		std::vector<Vertex_In> vertices;	// are cleared on theyre own when parsing in utils
 		std::vector<uint32_t> indices;
 
-		bool i=Utils::ParseOBJ("resources/vehicle.obj",vertices,indices);	// tuktuk parsing
+		bool i=Utils::ParseOBJ("resources/Kart.obj",vertices,indices);	// tuktuk parsing
 		pMesh = new Mesh(m_pDevice, vertices, indices,false);
 
 		meshStruct = MeshStruct{ vertices,indices, PrimitiveTopology::TriangleList	,{}, m_WorldMatrix };
