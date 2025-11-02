@@ -19,4 +19,4 @@ bld/
 .vs/
 
 # Do not ignore libs
-!project/libs/**
+!rasterizer/project/libs/**
