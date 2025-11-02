@@ -56,7 +56,7 @@ namespace dae {
 		m_MeshesStructVector.push_back(meshStruct);
 		m_pMeshesVector.push_back(pMesh);
 
-		Utils::ParseOBJ("resources/fireFX.obj", vertices, indices);	// Fire parsing
+		Utils::ParseOBJ("resources/Kart_fireFX.obj", vertices, indices);	// Fire parsing
 
 		pMesh = new Mesh(m_pDevice, vertices, indices,true);
 		meshStruct = MeshStruct{ vertices,indices, PrimitiveTopology::TriangleList	,{}, m_WorldMatrix };	// make a struct
@@ -68,8 +68,9 @@ namespace dae {
 
 
 		// Transform meshesStruct
-		for (auto& mesh : m_MeshesStructVector)
+		for (auto& mesh : m_MeshesStructVector){
 			mesh.worldMatrix *= Matrix::CreateTranslation(0.f, 0.f, 50.f);	// move the objects
+		}
 
 		// Transform m_WorldMatrix to move the meshes (only "okay" to do like this if they should have the same world matrix)
 		m_MeshTransformMatrix *= Matrix::CreateTranslation(0.f, 0.f, 50.f);	// move the objects

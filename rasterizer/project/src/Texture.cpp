@@ -96,8 +96,12 @@ namespace dae {
 			return { 0.f, 0.f, 0.f }; // Return a default color
 		}
 
-		int X = static_cast<int>(uv.x * m_pSurface->w);
-		int Y = static_cast<int>(uv.y * m_pSurface->h);
+		// --- Wrap UVs for tiling ---
+		float u = uv.x - std::floor(uv.x);
+		float v = uv.y - std::floor(uv.y);
+
+		int X = static_cast<int>(u * m_pSurface->w);
+		int Y = static_cast<int>(v * m_pSurface->h);
 
 		// Clamp X and Y to ensure they are within bounds
 		X = Clamp(X, 0, m_pSurface->w - 1);
